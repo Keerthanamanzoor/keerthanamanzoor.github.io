@@ -1,445 +1,1002 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keerthana Manzoor | AI & Software Engineer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+  <title>Keerthana Lakshmanan | AI Engineer</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f7f9fc;
-            color: #1f2937;
-            line-height: 1.6;
-        }
+  <meta
+    name="description"
+    content="Keerthana Lakshmanan - AI Engineer specializing in LLM, RAG, Voice AI, Python, FastAPI and Azure OpenAI."
+  >
 
-        header {
-            background: #111827;
-            color: white;
-            padding: 20px 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        nav h2 {
-            color: #60a5fa;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+      line-height: 1.6;
+    }
 
-        nav ul {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-        }
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-        nav a:hover {
-            color: #60a5fa;
-        }
+    /* NAVBAR */
 
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            padding: 60px 8%;
-            background: linear-gradient(135deg, #eff6ff, #ffffff);
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid #e5eaf2;
+    }
 
-        .hero-content {
-            max-width: 850px;
-        }
+    nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        .hero h1 {
-            font-size: 52px;
-            margin-bottom: 15px;
-            color: #111827;
-        }
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+    }
 
-        .hero h1 span {
-            color: #2563eb;
-        }
+    .logo span {
+      color: #2563eb;
+    }
 
-        .hero h3 {
-            font-size: 25px;
-            margin-bottom: 20px;
-            color: #374151;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
 
-        .hero p {
-            font-size: 18px;
-            max-width: 750px;
-            margin-bottom: 30px;
-            color: #4b5563;
-        }
+    nav ul li a {
+      color: #526078;
+      font-weight: 600;
+    }
 
-        .buttons a {
-            display: inline-block;
-            padding: 12px 22px;
-            margin-right: 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    nav ul li a:hover {
+      color: #2563eb;
+    }
 
-        .primary {
-            background: #2563eb;
-            color: white;
-        }
+    /* HERO */
 
-        .secondary {
-            border: 2px solid #2563eb;
-            color: #2563eb;
-        }
+    .hero {
+      padding: 110px 0 90px;
+      background: linear-gradient(
+        135deg,
+        #eef5ff,
+        #ffffff,
+        #f5f3ff
+      );
+    }
 
-        section {
-            padding: 75px 8%;
-        }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 55px;
+      align-items: center;
+    }
 
-        section h2 {
-            font-size: 34px;
-            margin-bottom: 30px;
-            color: #111827;
-        }
+    .eyebrow {
+      color: #2563eb;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
 
-        .about {
-            background: white;
-        }
+    h1 {
+      font-size: clamp(42px, 6vw, 75px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
 
-        .about p {
-            max-width: 900px;
-            font-size: 17px;
-        }
+    .hero h2 {
+      color: #526078;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
+    .hero p {
+      color: #5d687c;
+      font-size: 17px;
+      max-width: 700px;
+    }
 
-        .skill {
-            background: #e5efff;
-            color: #1e40af;
-            padding: 9px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-        }
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
 
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid #dbe3ef;
+      font-weight: 700;
+      transition: 0.2s;
+    }
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
 
-        .card h3 {
-            margin-bottom: 12px;
-            color: #1d4ed8;
-        }
+    .btn.primary {
+      background: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
 
-        .card p {
-            color: #4b5563;
-            margin-bottom: 15px;
-        }
+    .btn.secondary {
+      background: white;
+    }
 
-        .card a {
-            color: #2563eb;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .hero-card {
+      background: white;
+      padding: 30px;
+      border-radius: 22px;
+      border: 1px solid #e5eaf2;
+      box-shadow: 0 18px 45px rgba(37,99,235,0.08);
+    }
 
-        .experience {
-            background: white;
-        }
+    .hero-card h3 {
+      margin-bottom: 15px;
+    }
 
-        .experience-item {
-            max-width: 900px;
-            margin-bottom: 30px;
-        }
+    .hero-card p {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
 
-        .experience-item h3 {
-            color: #1d4ed8;
-        }
+    /* SECTIONS */
 
-        .publication {
-            background: #eff6ff;
-            padding: 25px;
-            border-radius: 12px;
-            max-width: 900px;
-        }
+    section {
+      padding: 80px 0;
+    }
 
-        .publication a {
-            color: #2563eb;
-            font-weight: bold;
-        }
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
 
-        .contact {
-            text-align: center;
-            background: #111827;
-            color: white;
-        }
+    .section-subtitle {
+      color: #667085;
+      margin-bottom: 32px;
+    }
 
-        .contact h2 {
-            color: white;
-        }
+    /* CARDS */
 
-        .contact a {
-            color: #60a5fa;
-            text-decoration: none;
-        }
+    .card {
+      background: white;
+      border: 1px solid #e5eaf2;
+      border-radius: 16px;
+      padding: 25px;
+      box-shadow: 0 8px 25px rgba(16,24,40,0.04);
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0b1120;
-            color: #9ca3af;
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
 
-        @media (max-width: 700px) {
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
+    .card h3 {
+      margin-bottom: 10px;
+    }
 
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+    .card p {
+      color: #5d687c;
+      font-size: 15px;
+    }
 
-            .hero h1 {
-                font-size: 38px;
-            }
+    .meta {
+      color: #2563eb;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
 
-            .hero h3 {
-                font-size: 21px;
-            }
-        }
-    </style>
+    /* EXPERIENCE */
+
+    .experience-card {
+      background: white;
+      border: 1px solid #e5eaf2;
+      border-radius: 16px;
+      padding: 28px;
+    }
+
+    .experience-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .experience-top span {
+      color: #667085;
+      font-weight: 600;
+    }
+
+    .experience-card ul {
+      padding-left: 20px;
+      color: #5d687c;
+    }
+
+    .experience-card li {
+      margin: 8px 0;
+    }
+
+    /* SKILLS */
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .skill-box {
+      background: white;
+      border: 1px solid #e5eaf2;
+      border-radius: 15px;
+      padding: 22px;
+    }
+
+    .skill-box h3 {
+      color: #2563eb;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .skill-box p {
+      color: #5d687c;
+    }
+
+    /* EDUCATION */
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      background: white;
+      border-left: 4px solid #2563eb;
+      padding: 20px 24px;
+      border-radius: 0 14px 14px 0;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 5px;
+    }
+
+    .timeline-item p {
+      color: #667085;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #111827;
+      color: white;
+      border-radius: 24px;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .contact p {
+      color: #cbd5e1;
+      margin: 12px 0 24px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      color: #667085;
+      padding: 30px 0 40px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav ul {
+        display: none;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 70px;
+      }
+
+      .contact {
+        padding: 35px 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <h2>Keerthana</h2>
+<!-- ================= NAVBAR ================= -->
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+<header>
+  <div class="container">
+
+    <nav>
+
+      <a class="logo" href="#home">
+        Keerthana<span>.</span>
+      </a>
+
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
     </nav>
+
+  </div>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Hi, I'm <span>Keerthana</span></h1>
 
-        <h3>AI & Software Engineer</h3>
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        AI Engineer • LLM • RAG • Voice AI
+      </div>
+
+      <h1>
+        Hi, I’m Keerthana.
+      </h1>
+
+      <h2>
+        AI Engineer | LLM, RAG &amp; Voice AI | Python, FastAPI, Azure OpenAI
+      </h2>
+
+      <p>
+        AI Engineer with 1+ year of experience building production-grade
+        LLM, RAG, and voice AI applications using Azure OpenAI, Python,
+        and FastAPI, and an MSc candidate in Artificial Intelligence.
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn primary" href="#projects">
+          View Projects
+        </a>
+
+        <a
+          class="btn secondary"
+          href="https://github.com/Keerthanamanzoor"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+        <a
+          class="btn secondary"
+          href="https://www.linkedin.com/in/keerthana-l-0ab65127b"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+      <h3>
+        Focus Areas
+      </h3>
+
+      <p>• Generative AI &amp; LLM Applications</p>
+      <p>• RAG &amp; Semantic Search</p>
+      <p>• Vector Search</p>
+      <p>• Voice AI &amp; Conversational AI</p>
+      <p>• AI Workflow Automation</p>
+      <p>• Python &amp; FastAPI</p>
+      <p>• Azure OpenAI</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      About Me
+    </h2>
+
+    <p class="section-subtitle">
+      Building practical AI systems that connect intelligent models
+      with real-world workflows.
+    </p>
+
+    <div class="card">
+
+      <p>
+        I am an AI Engineer and MSc candidate in Artificial Intelligence.
+        My work combines LLMs, RAG, semantic search, voice AI,
+        backend engineering, API development and workflow automation.
+        I created Salma, a voice AI assistant that helps users complete
+        bank forms and transactions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Experience
+    </h2>
+
+    <p class="section-subtitle">
+      Professional experience in AI, backend development and
+      operations support.
+    </p>
+
+    <div class="experience-card">
+
+      <div class="experience-top">
+
+        <div>
+
+          <h3>
+            Software Engineer (Operations Support) – AI &amp; Backend
+          </h3>
+
+          <strong>
+            NeonIntelli Technologies Pvt. Ltd.
+          </strong>
+
+        </div>
+
+        <span>
+          Aug. 2025 – Present<br>
+          Chennai, India
+        </span>
+
+      </div>
+
+
+      <ul>
+
+        <li>
+          Built Salma, an AI assistant on Azure OpenAI and FastAPI,
+          enabling users to complete bank forms and transactions by voice.
+        </li>
+
+        <li>
+          Improved operational efficiency by 35% via an email
+          ticketing system and RBAC workflows.
+        </li>
+
+        <li>
+          Integrated Azure OpenAI, LLMs, RAG and semantic search
+          for fast information retrieval.
+        </li>
+
+        <li>
+          Built AI applications and automated workflows using Python,
+          FastAPI, .NET 8, SQL Server and REST APIs.
+        </li>
+
+        <li>
+          Improved page loads in React and Ionic applications with
+          lazy loading, real-time dashboards and secure APIs.
+        </li>
+
+        <li>
+          Supported production reliability through debugging,
+          incident resolution and performance monitoring.
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Projects
+    </h2>
+
+    <p class="section-subtitle">
+      Selected academic and machine-learning projects.
+    </p>
+
+
+    <div class="grid">
+
+
+      <!-- PROJECT 1 -->
+
+      <div class="card">
+
+        <div class="meta">
+          SemEval 2026 • NLP • Machine Learning
+        </div>
+
+        <h3>
+          Machine-Generated Code Detection
+        </h3>
 
         <p>
-            Master's student in Artificial Intelligence with experience in
-            machine learning, deep learning, backend development, API
-            integration, workflow automation and AI-powered applications.
+          Detected AI-generated code for SemEval 2026 by building
+          NLP/ML models with feature engineering and evaluation.
+        </p>
+
+      </div>
+
+
+      <!-- PROJECT 2 -->
+
+      <div class="card">
+
+        <div class="meta">
+          Genetic Algorithm • PSO • CIFAR-10
+        </div>
+
+        <h3>
+          CNN Optimization
+        </h3>
+
+        <p>
+          Optimized Convolutional Neural Network architectures using
+          Genetic Algorithm (GA) and Particle Swarm Optimization (PSO),
+          reaching 80.27% accuracy on CIFAR-10.
         </p>
 
         <div class="buttons">
-            <a class="primary" href="#projects">View Projects</a>
-            <a class="secondary" href="https://github.com/Keerthanamanzoor">
-                GitHub
-            </a>
+
+          <a
+            class="btn secondary"
+            href="https://github.com/Keerthanamanzoor/Optimizing-Deep-Learning-Architectures"
+            target="_blank"
+          >
+            View on GitHub
+          </a>
+
         </div>
+
+      </div>
+
+
+      <!-- PROJECT 3 -->
+
+      <div class="card">
+
+        <div class="meta">
+          NLP • TF-IDF • SVM • Random Forest
+        </div>
+
+        <h3>
+          Sentiment Analysis
+        </h3>
+
+        <p>
+          Classified university reviews using a TF-IDF, SVM and
+          Random Forest pipeline, reaching 76.19% accuracy.
+        </p>
+
+      </div>
+
     </div>
+
+  </div>
+
 </section>
 
-<section id="about" class="about">
-    <h2>About Me</h2>
 
-    <p>
-        I am an Artificial Intelligence Master's student and Software Engineer
-        with a background in Electronics and Communication Engineering.
-        My interests include Machine Learning, Deep Learning, Explainable AI,
-        Generative AI, NLP and intelligent software systems.
-    </p>
-</section>
+<!-- ================= SKILLS ================= -->
 
 <section id="skills">
-    <h2>Technical Skills</h2>
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Technical Skills
+    </h2>
+
+    <p class="section-subtitle">
+      Technologies and concepts from my professional profile.
+    </p>
+
 
     <div class="skills">
-        <span class="skill">Python</span>
-        <span class="skill">C/C++</span>
-        <span class="skill">MATLAB</span>
-        <span class="skill">TensorFlow</span>
-        <span class="skill">Keras</span>
-        <span class="skill">PyTorch</span>
-        <span class="skill">Scikit-learn</span>
-        <span class="skill">FastAPI</span>
-        <span class="skill">.NET 8</span>
-        <span class="skill">React</span>
-        <span class="skill">Ionic</span>
-        <span class="skill">SQL</span>
-        <span class="skill">REST APIs</span>
-        <span class="skill">Machine Learning</span>
-        <span class="skill">Deep Learning</span>
-        <span class="skill">NLP</span>
-        <span class="skill">LLMs</span>
-        <span class="skill">Prompt Engineering</span>
-        <span class="skill">Git</span>
-        <span class="skill">Power BI</span>
-        <span class="skill">Azure</span>
-    </div>
-</section>
 
-<section id="projects">
-    <h2>Featured Projects</h2>
 
-    <div class="projects">
+      <div class="skill-box">
 
-        <div class="card">
-            <h3>Aircraft Wing Optimization</h3>
-
-            <p>
-                Optimized a NASA CRM aircraft wing using Genetic Algorithm,
-                Particle Swarm Optimization and Tornado Optimizer with
-                Coriolis force.
-            </p>
-
-            <a href="https://github.com/Keerthanamanz oor">
-                View on GitHub →
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Optimizing Deep Learning Architectures</h3>
-
-            <p>
-                Explored evolutionary and swarm-based optimization techniques
-                for improving deep learning model architectures and
-                performance.
-            </p>
-
-            <a href="https://github.com/Keerthanamanz oor">
-                View on GitHub →
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>Sentiment Analysis of University Reviews</h3>
-
-            <p>
-                Built a sentiment analysis system using TF-IDF,
-                Random Forest and Support Vector Machine for university review
-                classification.
-            </p>
-
-            <a href="https://github.com/Keerthanamanz oor">
-                View on GitHub →
-            </a>
-        </div>
-
-        <div class="card">
-            <h3>AI-Powered Software Applications</h3>
-
-            <p>
-                Developed AI-enabled applications involving FastAPI,
-                React, .NET 8, REST APIs, workflow automation and
-                voice-enabled interfaces.
-            </p>
-
-            <a href="https://github.com/Keerthanamanz oor">
-                View on GitHub →
-            </a>
-        </div>
-
-    </div>
-</section>
-
-<section id="experience" class="experience">
-    <h2>Experience</h2>
-
-    <div class="experience-item">
-        <h3>Software Engineer – Operations Support</h3>
-
-        <p><strong>NeonIntelli Technologies Pvt. Ltd.</strong></p>
+        <h3>
+          AI &amp; Machine Learning
+        </h3>
 
         <p>
-            Developed and supported software applications using FastAPI,
-            .NET 8, React and Ionic. Worked on API integration, RBAC-based
-            workflows, AI-powered applications, voice-enabled interfaces,
-            debugging and production support.
+          LLMs, Generative AI, RAG, Embeddings, Semantic Search,
+          Vector Search, NLP, Machine Learning, Deep Learning,
+          AI Agents, Prompt Engineering, AI Workflow Automation,
+          Voice AI, Conversational AI
         </p>
-    </div>
-</section>
 
-<section id="research">
-    <h2>Research</h2>
+      </div>
 
-    <div class="publication">
-        <h3>Research & Publications</h3>
+
+      <div class="skill-box">
+
+        <h3>
+          LLM &amp; Vector Stack
+        </h3>
 
         <p>
-            My research interests include Physics-Aware Deep Learning,
-            Quantitative Ultrasound, Evolutionary Optimization and
-            AI-based medical image analysis.
+          Azure OpenAI, LangChain, Hugging Face, FAISS,
+          ChromaDB, Vector Databases
         </p>
 
-        <br>
+      </div>
+
+
+      <div class="skill-box">
+
+        <h3>
+          Languages &amp; Databases
+        </h3>
 
         <p>
-            Publication and research work can be found through my academic
-            profiles and research repositories.
+          Python, SQL, JavaScript, SQL Server, SQLite
         </p>
+
+      </div>
+
+
+      <div class="skill-box">
+
+        <h3>
+          Frameworks &amp; APIs
+        </h3>
+
+        <p>
+          FastAPI, React.js, Node.js, Ionic, .NET 8, REST APIs
+        </p>
+
+      </div>
+
+
+      <div class="skill-box">
+
+        <h3>
+          Tools &amp; Cloud
+        </h3>
+
+        <p>
+          Git, Docker, Azure, Postman
+        </p>
+
+      </div>
+
+
+      <div class="skill-box">
+
+        <h3>
+          Core
+        </h3>
+
+        <p>
+          API Development, Database Design, System Design,
+          RBAC, Email Ticketing, Lazy Loading
+        </p>
+
+      </div>
+
     </div>
+
+  </div>
+
 </section>
 
-<section id="contact" class="contact">
-    <h2>Let's Connect</h2>
 
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com">
-            View LinkedIn
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Education
+    </h2>
+
+    <div class="timeline">
+
+
+      <div class="timeline-item">
+
+        <h3>
+          M.Sc. in Artificial Intelligence
+        </h3>
+
+        <strong>
+          Ajman University — Ajman, UAE
+        </strong>
+
+        <p>
+          GPA: 3.4/4.0 • Aug. 2024 – May 2027 (Expected)
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <h3>
+          B.E. in Electronics and Communication Engineering
+        </h3>
+
+        <strong>
+          SA Engineering College — Chennai, India
+        </strong>
+
+        <p>
+          GPA: 8.69/10 • Jun. 2019 – Apr. 2023
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= PUBLICATION ================= -->
+
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Publication
+    </h2>
+
+    <div class="card">
+
+      <div class="meta">
+        Dec. 2025 • ACIT 2025
+      </div>
+
+      <h3>
+        Improved Tornado Optimizer with Coriolis Force
+        for Aero-Structural Wing Design
+      </h3>
+
+      <p>
+        Published conference paper. Co-authored research on a
+        Tornado Optimizer with Coriolis Force for wing design optimization.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section>
+
+  <div class="container">
+
+    <h2 class="section-title">
+      Certifications &amp; Training
+    </h2>
+
+    <div class="grid">
+
+
+      <div class="card">
+
+        <h3>
+          Explainable Machine Learning (XAI)
+        </h3>
+
+        <p>
+          DeepLearning.AI / Coursera • Mar 2025
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Convolutional Neural Networks (CNN)
+        </h3>
+
+        <p>
+          DeepLearning.AI • Apr 2025
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          Python for Data Science and AI
+        </h3>
+
+        <p>
+          IBM • Nov 2024
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <h3>
+          One Million Prompters
+        </h3>
+
+        <p>
+          Dubai Future Foundation / DCAI • Jun 2026
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="contact">
+
+      <h2>
+        Let’s Connect
+      </h2>
+
+      <p>
+        AI Engineer focused on LLM, RAG, Voice AI,
+        backend engineering and AI workflow automation.
+      </p>
+
+      <div
+        class="buttons"
+        style="justify-content:center;"
+      >
+
+        <a
+          class="btn secondary"
+          href="mailto:keerthana.mh29@gmail.com"
+        >
+          Email Me
         </a>
-    </p>
 
-    <p>
-        GitHub:
-        <a href="https://github.com/Keerthanamanz oor">
-            View GitHub
+        <a
+          class="btn secondary"
+          href="https://www.linkedin.com/in/keerthana-l-0ab65127b"
+          target="_blank"
+        >
+          LinkedIn
         </a>
-    </p>
+
+        <a
+          class="btn secondary"
+          href="https://github.com/Keerthanamanzoor"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
-    © 2026 Keerthana Manzoor. All rights reserved.
+
+  <div class="container">
+
+    © 2026 Keerthana Lakshmanan. All rights reserved.
+
+  </div>
+
 </footer>
+
 
 </body>
 </html>
