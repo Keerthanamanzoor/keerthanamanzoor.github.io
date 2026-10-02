@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keerthana Manzoor | AI & Software Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: #60a5fa;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #eff6ff, #ffffff);
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 15px;
+            color: #111827;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #374151;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 750px;
+            margin-bottom: 30px;
+            color: #4b5563;
+        }
+
+        .buttons a {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-right: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .secondary {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+        }
+
+        section {
+            padding: 75px 8%;
+        }
+
+        section h2 {
+            font-size: 34px;
+            margin-bottom: 30px;
+            color: #111827;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about p {
+            max-width: 900px;
+            font-size: 17px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #e5efff;
+            color: #1e40af;
+            padding: 9px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #1d4ed8;
+        }
+
+        .card p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .experience {
+            background: white;
+        }
+
+        .experience-item {
+            max-width: 900px;
+            margin-bottom: 30px;
+        }
+
+        .experience-item h3 {
+            color: #1d4ed8;
+        }
+
+        .publication {
+            background: #eff6ff;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 900px;
+        }
+
+        .publication a {
+            color: #2563eb;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        .contact h2 {
+            color: white;
+        }
+
+        .contact a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0b1120;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h3 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h2>Keerthana</h2>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hi, I'm <span>Keerthana</span></h1>
+
+        <h3>AI & Software Engineer</h3>
+
+        <p>
+            Master's student in Artificial Intelligence with experience in
+            machine learning, deep learning, backend development, API
+            integration, workflow automation and AI-powered applications.
+        </p>
+
+        <div class="buttons">
+            <a class="primary" href="#projects">View Projects</a>
+            <a class="secondary" href="https://github.com/Keerthanamanz oor">
+                GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+
+    <p>
+        I am an Artificial Intelligence Master's student and Software Engineer
+        with a background in Electronics and Communication Engineering.
+        My interests include Machine Learning, Deep Learning, Explainable AI,
+        Generative AI, NLP and intelligent software systems.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skills">
+        <span class="skill">Python</span>
+        <span class="skill">C/C++</span>
+        <span class="skill">MATLAB</span>
+        <span class="skill">TensorFlow</span>
+        <span class="skill">Keras</span>
+        <span class="skill">PyTorch</span>
+        <span class="skill">Scikit-learn</span>
+        <span class="skill">FastAPI</span>
+        <span class="skill">.NET 8</span>
+        <span class="skill">React</span>
+        <span class="skill">Ionic</span>
+        <span class="skill">SQL</span>
+        <span class="skill">REST APIs</span>
+        <span class="skill">Machine Learning</span>
+        <span class="skill">Deep Learning</span>
+        <span class="skill">NLP</span>
+        <span class="skill">LLMs</span>
+        <span class="skill">Prompt Engineering</span>
+        <span class="skill">Git</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">Azure</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="projects">
+
+        <div class="card">
+            <h3>Aircraft Wing Optimization</h3>
+
+            <p>
+                Optimized a NASA CRM aircraft wing using Genetic Algorithm,
+                Particle Swarm Optimization and Tornado Optimizer with
+                Coriolis force.
+            </p>
+
+            <a href="https://github.com/Keerthanamanz oor">
+                View on GitHub →
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Optimizing Deep Learning Architectures</h3>
+
+            <p>
+                Explored evolutionary and swarm-based optimization techniques
+                for improving deep learning model architectures and
+                performance.
+            </p>
+
+            <a href="https://github.com/Keerthanamanz oor">
+                View on GitHub →
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>Sentiment Analysis of University Reviews</h3>
+
+            <p>
+                Built a sentiment analysis system using TF-IDF,
+                Random Forest and Support Vector Machine for university review
+                classification.
+            </p>
+
+            <a href="https://github.com/Keerthanamanz oor">
+                View on GitHub →
+            </a>
+        </div>
+
+        <div class="card">
+            <h3>AI-Powered Software Applications</h3>
+
+            <p>
+                Developed AI-enabled applications involving FastAPI,
+                React, .NET 8, REST APIs, workflow automation and
+                voice-enabled interfaces.
+            </p>
+
+            <a href="https://github.com/Keerthanamanz oor">
+                View on GitHub →
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="experience" class="experience">
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+        <h3>Software Engineer – Operations Support</h3>
+
+        <p><strong>NeonIntelli Technologies Pvt. Ltd.</strong></p>
+
+        <p>
+            Developed and supported software applications using FastAPI,
+            .NET 8, React and Ionic. Worked on API integration, RBAC-based
+            workflows, AI-powered applications, voice-enabled interfaces,
+            debugging and production support.
+        </p>
+    </div>
+</section>
+
+<section id="research">
+    <h2>Research</h2>
+
+    <div class="publication">
+        <h3>Research & Publications</h3>
+
+        <p>
+            My research interests include Physics-Aware Deep Learning,
+            Quantitative Ultrasound, Evolutionary Optimization and
+            AI-based medical image analysis.
+        </p>
+
+        <br>
+
+        <p>
+            Publication and research work can be found through my academic
+            profiles and research repositories.
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Let's Connect</h2>
+
+    <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com">
+            View LinkedIn
+        </a>
+    </p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/Keerthanamanz oor">
+            View GitHub
+        </a>
+    </p>
+</section>
+
+<footer>
+    © 2026 Keerthana Manzoor. All rights reserved.
+</footer>
+
+</body>
+</html>
